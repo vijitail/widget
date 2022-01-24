@@ -1,5 +1,6 @@
-import useCryptoData from './useCryptoData'
 import React from 'react'
+import useCryptoData from './useCryptoData'
+import './style.css'
 
 const CryptoItem = (props) => (
   <div className='item'>

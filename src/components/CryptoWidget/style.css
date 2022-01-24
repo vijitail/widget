@@ -11,70 +11,70 @@
   font-family: 'Open Sans', sans-serif;
 }
 
-._FeSXH,
-._GmOjV {
+.name,
+.loading-text {
   color: var(--light);
   font-size: 16px;
   font-weight: 600;
 }
 
-._1j2Th {
+.fullname {
   color: #b6b6b6;
   font-size: 14px;
   margin-top: 3px;
   font-weight: 500;
 }
 
-._3Cd2I {
+.item {
   display: flex;
   align-items: center;
   padding: 12px 0px;
   border-bottom: 1px solid #949191;
 }
 
-._3Cd2I:first-child {
+.item:first-child {
   padding-top: 0px;
 }
 
-._3Cd2I:last-child {
+.item:last-child {
   padding-bottom: 0px;
   border-bottom: 0px;
 }
 
-.__6Aec {
+.container {
   background-color: var(--dark);
   padding: 20px;
   border-radius: 12px;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 30px;
 }
 
-._2ys8T {
+.icon {
   height: 24px;
   width: 24px;
   margin-right: 14px;
 }
 
-._3MuM6 {
+.price-container {
   margin-left: auto;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
 }
 
-._3Qe5N {
+.price {
   font-weight: 500;
   color: var(--light);
   font-size: 16px;
 }
 
-._3Y5iY {
+.price-change {
   margin-top: 3px;
 }
 
-._3Y5iY._3Ot_7 {
+.price-change.danger {
   color: var(--danger);
 }
 
-._3Y5iY._10GKa {
+.price-change.success {
   color: var(--success);
 }
