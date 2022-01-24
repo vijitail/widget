@@ -1,4 +1,4 @@
-import useCryptoData from '../hooks/useCryptoData'
+import useCryptoData from './useCryptoData'
 
 const CryptoItem = (props) => (
   <div className='item'>
