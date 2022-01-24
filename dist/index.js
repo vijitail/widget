@@ -1,4 +1,7 @@
-var react = require('react');
+function _interopDefault (ex) { return (ex && (typeof ex === 'object') && 'default' in ex) ? ex['default'] : ex; }
+
+var React = require('react');
+var React__default = _interopDefault(React);
 
 function _extends() {
   _extends = Object.assign || function (target) {
@@ -19,15 +22,15 @@ function _extends() {
 }
 
 var useCryptoData = function useCryptoData() {
-  var _useState = react.useState([]),
+  var _useState = React.useState([]),
       cryptoData = _useState[0],
       setCryptoData = _useState[1];
 
-  var _useState2 = react.useState(true),
+  var _useState2 = React.useState(true),
       isLoading = _useState2[0],
       setLoading = _useState2[1];
 
-  react.useEffect(function () {
+  React.useEffect(function () {
     setLoading(true);
     fetch('https://min-api.cryptocompare.com/data/top/mktcapfull?limit=11&tsym=USD').then(function (res) {
       return res.json();
@@ -76,23 +79,23 @@ var useCryptoData = function useCryptoData() {
 };
 
 var CryptoItem = function CryptoItem(props) {
-  return /*#__PURE__*/React.createElement("div", {
+  return /*#__PURE__*/React__default.createElement("div", {
     className: "item"
-  }, /*#__PURE__*/React.createElement("img", {
+  }, /*#__PURE__*/React__default.createElement("img", {
     src: props.ImageUrl,
     className: "icon",
     alt: props.Name
-  }), /*#__PURE__*/React.createElement("div", {
+  }), /*#__PURE__*/React__default.createElement("div", {
     className: "display-container"
-  }, /*#__PURE__*/React.createElement("div", {
+  }, /*#__PURE__*/React__default.createElement("div", {
     className: "name"
-  }, props.Name), /*#__PURE__*/React.createElement("div", {
+  }, props.Name), /*#__PURE__*/React__default.createElement("div", {
     className: "fullname"
-  }, props.FullName)), /*#__PURE__*/React.createElement("div", {
+  }, props.FullName)), /*#__PURE__*/React__default.createElement("div", {
     className: "price-container"
-  }, /*#__PURE__*/React.createElement("div", {
+  }, /*#__PURE__*/React__default.createElement("div", {
     className: "price"
-  }, props.Price), /*#__PURE__*/React.createElement("div", {
+  }, props.Price), /*#__PURE__*/React__default.createElement("div", {
     className: "price-change " + (parseInt(props.Change24hr) < 0 ? 'danger' : 'success')
   }, props.Change24hr && props.Change24hr + "%")));
 };
@@ -102,13 +105,13 @@ var CryptoList = function CryptoList() {
       cryptoData = _useCryptoData.cryptoData,
       isLoading = _useCryptoData.isLoading;
 
-  return /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("div", {
+  return /*#__PURE__*/React__default.createElement("div", null, /*#__PURE__*/React__default.createElement("div", {
     className: "container"
   }, !isLoading ? cryptoData.map(function (itemData) {
-    return /*#__PURE__*/React.createElement(CryptoItem, _extends({
+    return /*#__PURE__*/React__default.createElement(CryptoItem, _extends({
       key: itemData.Id
     }, itemData));
-  }) : /*#__PURE__*/React.createElement("p", {
+  }) : /*#__PURE__*/React__default.createElement("p", {
     className: "loading-text"
   }, "Loading Data...")));
 };

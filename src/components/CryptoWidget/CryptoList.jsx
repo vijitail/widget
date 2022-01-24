@@ -1,4 +1,5 @@
 import useCryptoData from './useCryptoData'
+import React from 'react'
 
 const CryptoItem = (props) => (
   <div className='item'>
